@@ -693,12 +693,13 @@ module.exports = (function() {
     Object.defineProperty(
       PointerEvent.prototype,
       'twist',
-      Object.getOwnPropertyDescriptor(PointerEvent.prototype, 'rotation')
+      Object.getOwnPropertyDescriptor(PointerEvent.prototype, 'rotation') || {}
     );
 
     window.PointerEvent = PointerEvent;
   }
 })();
+
 },{}],10:[function(require,module,exports){
 require('./Event.js');
 require('./CustomEvent.js');

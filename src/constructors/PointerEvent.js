@@ -62,7 +62,7 @@
     Object.defineProperty(
       PointerEvent.prototype,
       'twist',
-      Object.getOwnPropertyDescriptor(PointerEvent.prototype, 'rotation')
+      Object.getOwnPropertyDescriptor(PointerEvent.prototype, 'rotation') || {}
     );
 
     window.PointerEvent = PointerEvent;
